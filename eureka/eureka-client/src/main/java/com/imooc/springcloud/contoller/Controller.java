@@ -1,4 +1,4 @@
-package contoller;
+package com.imooc.springcloud.contoller;
 
 import com.imooc.springcloud.entity.Friend;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class Controller {
 
-    @Value("${server.post}")
+    @Value("${server.port}")
     private String port;
 
     @GetMapping("/sayHi")
@@ -20,7 +20,7 @@ public class Controller {
         return "Hello world~~~ " + port;
     }
 
-    @PostMapping("/sayHiPost")
+    @PostMapping("/sayHi")
     public Friend sayHiPost(@RequestBody Friend friend){
         log.info("You are " + friend.getName());
         friend.setPort(port);
