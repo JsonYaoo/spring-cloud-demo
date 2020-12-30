@@ -14,6 +14,7 @@
         <module>eureka/eureka-consumer</module>
         <module>feign/feign-client-intf</module>
         <module>feign/feign-client</module>
+        <module>feign/feign-consumer</module>
     </modules>
 
     <dependencyManagement>
